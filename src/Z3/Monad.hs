@@ -403,7 +403,6 @@ module Z3.Monad
   , optimizeGetModel
   , optimizeGetUnsatCore
   , optimizeSetParams
-  , optimizeGetLower
   , optimizeGetUpper
   , optimizeGetLower
   , optimizeGetUpperAsVector
@@ -2355,7 +2354,7 @@ optimizeGetLower :: MonadOptimize z3 => Int -> z3 AST
 optimizeGetLower = liftOptimize1 Base.optimizeGetLower
 
 optimizeGetUpper :: MonadOptimize z3 => Int -> z3 AST
-optimizeGetUpper = liftOptimize1 Base.optimizeGetLower
+optimizeGetUpper = liftOptimize1 Base.optimizeGetUpper
 
 optimizeGetUpperAsVector :: MonadOptimize z3 => Int -> z3 [AST]
 optimizeGetUpperAsVector = liftOptimize1 Base.optimizeGetUpperAsVector
